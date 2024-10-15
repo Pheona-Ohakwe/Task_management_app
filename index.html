@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="To-do List" content="Task Management to-do list" />
+    <link
+      rel="shortcut icon"
+      href="./static/images/large_taskdaddy.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./static/style.css" />
+    <link rel="stylesheet" href="./static/alibaba-sans/AlibabaSans-Black.ttf" />
+    <!-- Coolors Palette Widget -->
+    <script src="https://coolors.co/palette-widget/widget.js"></script>
+    <script data-id="08240210496800466">
+      new CoolorsPaletteWidget("08240210496800466", [
+        "000000",
+        "f10101",
+        "0135ce",
+        "00bfe3",
+        "23007d",
+        "f0ec02",
+        "4f0142",
+        "e65400",
+        "db02a3",
+        "b6edfa",
+        "ffffff",
+      ]);
+    </script>
+    <title>Task Management To-do List</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#"> </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="login"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="nav1" href="registration.html"
+                  >Register</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                >
+                  Tasks
+                </a>
+                <ul class="dropdown-options" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="task_dashboard.html"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="task_create.html">Create</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="task_details.html"
+                      >Details</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Login Modal Section-->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  pattern="[\w]+@[\w]+[.][a-z]{2,3}"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <div class="mt-3">
+                <p>
+                  Not a member? <a href="registration.html">Sign up here</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Branding/ Logo Section -->
+    <div class="container-fluid" id="photo">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <img
+            src="./static/images/task_daddy_MAIN.png"
+            class="img-fluid"
+            alt="Logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview/About Section -->
+    <section>
+      <div
+        class="container-fluid row justify-content-between align-items-center"
+        id="overview"
+      >
+        <div class="col-md-7">
+          <p>
+            Elevate your team's productivity with our innovative task management
+            to-do list app. Seamlessly integrate your team's expertise into a
+            centralized platform, empowering efficient collaboration and
+            ensuring clarity every step of the way. With standardized task lists
+            and robust controls, every member of your team can effortlessly stay
+            aligned and focused, driving success in every project.
+          </p>
+        </div>
+        <div class="col-md-5 d-flex align-content-center">
+          <img
+            src="./static/images/profesionals.jpeg"
+            class="img-fluid"
+            id="team"
+            alt="professionals working"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- image section -->
+    <section>
+      <div class="container-fluid" id="professionals">
+        <div class="row">
+          <div class="col-md-12 pt-5">
+            <img
+              src="./static/images/team.jpeg"
+              class="img-fluid"
+              id="professionals-img"
+              alt="professionals meetings"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is TASK DADDY -->
+    <section class="container-fluid pt-5" id="about">
+      <h2 class="mb-5 text-center" id="about-header" style="text-align: center">
+        What TASK DADDY Is All About
+      </h2>
+      <div class="row">
+        <div class="col-md-12 d-flex align-items-center">
+          <p class="about-text">
+            Task Daddy is the ultimate task management to-do list app in 2024.
+            It's designed to streamline your workflow and enhance team
+            productivity. With Task Daddy, you can effortlessly monitor and
+            track the progress of every task, ensuring a smooth and efficient
+            completion process. By standardizing tasks and facilitating the flow
+            of information, Task Daddy helps your team adopt best practices and
+            achieve optimal results. Our centralized platform offers checklists,
+            task libraries, and status updates, serving as the definitive
+            resource for managing your projects. Say goodbye to confusion and
+            wasted time — Task Daddy ensures that everyone on your team
+            understands their responsibilities, boosting morale and eliminating
+            the need for tedious meetings. With built-in separation of duties
+            and robust internal controls, you can confidently assign and manage
+            tasks, preventing bottlenecks and ensuring seamless collaboration.
+            And when integrated with other tools in the Task Daddy suite,
+            automation and system-prepared tasks simplify your workflow, making
+            task management a breeze. Say hello to efficiency and success with
+            Task Daddy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top 3 Features Section -->
+    <section class="container d-flex justify-content-center" id="features">
+      <div class="row justify-content-between" id="features-container">
+        <!-- Features Column -->
+        <div class="col-lg-12 mb-4" id="top-features-container">
+          <h2 class="features mb-4">Top Features</h2>
+          <!-- Feature 1 -->
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <i class="far fa-clock fa-3x mb-3"></i>
+              <p class="card-text">Minimize meeting duration times</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <i class="fas fa-tasks fa-3x mb-3"></i>
+              <p class="card-text">
+                Ongoing tracking of task progress and deadlines
+              </p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <i class="fas fa-clipboard-check fa-3x mb-3"></i>
+              <p class="card-text">
+                Ensuring adherence to company standards and rules
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Recognition Column -->
+    <section class="container-fluid pt-5" id="rec">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="box" id="recognition-box">
+              <h2 class="awards mb-4">TASK DADDY being recognized by the best</h2>
+              <div class="row mb-4">
+                <div
+                  class="col-md-12 text-center mb-md-0 mb-3"
+                  id="recognition-container"
+                >
+                  <img
+                    src="./static/images/group_awards.png"
+                    class="img-fluid wider-award"
+                    alt="Award Image"
+                    id="award-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonial Section -->
+      <section
+        class="container d-flex flex-direction-row flex-wrap justify-content-center testimonial"
+      >
+        <div class="row justify-content-between">
+          <div class="col-lg-12">
+            <img
+              src="./static/images/blurb.png"
+              class="img-fluid"
+              id="blurb-img"
+              alt="blurb from customer"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <a href="./reviews.html" class="btn">Reviews</a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Footer Section-->
+      <footer class="footer">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="col-md-4 mt-3">
+              <h5 class="text">Contact Us</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="mailto:info@taskdaddy.com" class="accent-text"
+                    >info@taskdaddy.com</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+1234567890" class="accent-text"
+                    >+1 234 567 8901</a
+                  >
+                </li>
+                <li><a href="#" class="accent-text">123 Task Daddy Way</a></li>
+                <li><a href="#" class="accent-text">New York, NY 10001</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 my-3">
+              <img
+                src="./static/images/task_daddy_logo-transparent.gif"
+                alt="Footer Image"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4 mt-3 justify-content-end">
+              <h5 class="text">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="privacy_policy.html" class="accent-text"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="terms_of_use.html" class="accent-text">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12 text-center">
+              <p class="accent">
+                Your go-to task management and to-do list solution.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3" id="copy-banner">
+          &copy; 2024 TaskDaddy. All rights reserved.
+        </div>
+      </footer>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

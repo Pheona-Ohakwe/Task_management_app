@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="task-details" content="Task Details"/>
+<link rel="shortcut icon" href="./static/images/large_taskdaddy.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./static/task-details-styles.css">
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+<script data-id="08240210496800466">new CoolorsPaletteWidget("08240210496800466", ["000000","f10101","0135ce","00bfe3","23007d","f0ec02","4f0142","e65400","db02a3","b6edfa","ffffff"]); </script>
+<title>Task Details</title>
+
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" id="nav1" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" id="login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+                                Tasks
+                            </a>
+                            <ul class="dropdown-options" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="task_dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="task_create.html">Create</a></li>
+                                <li><a class="dropdown-item" href="task_details.html">Details</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <div class="mt-3">
+                                <p>Not a member? <a href="registration.html">Sign up here</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Priority Task Progress -->
+        <section class="container-fluid "></section>
+        <div class="container row col-12 rounded p-3 m-5" id="priority">
+            <h4 class="ptasks">Priority Tasks</h4>
+            <div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+            </div>
+            <div class="progress ps-0 my-4" role="progressbar" aria-label="Launch New Website" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar second" style="width: 50%">Launch New Website</div>
+            </div>
+            <div class="progress ps-0" role="progressbar" aria-label="Project 1" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar third" style="width: 65%">Overview Project</div>
+            </div>
+        </div>
+        </section>
+        
+        <!-- Carousel of tasks, each card should be editable -->
+        <section class="container d-flex justify-content-center mb-5">
+        <div id="carouselExample" class="carousel slide col-6">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <div class="card border-rounded cback">
+                    <div class="card-header">
+                        Task Details
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Quarterly Budget</h5>
+                        <p class="card-text">
+                        <p><h4>Date Created:</h4> 05/06/2024</p>
+                        <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                            </div></p>
+                        <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                        <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                        <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                        </p>
+                        <div class="col-md-8">
+                        <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                        <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                <div class="card border-rounded cback">
+                    <div class="card-header">
+                        Task Details
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Quarterly Budget</h5>
+                        <p class="card-text">
+                            <p><h4>Date Created:</h4> 05/06/2024</p>
+                            <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                            </div></p>
+                            <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                        <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                        <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                        </p>
+                        <div class="col-md-8">
+                        <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                        <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                <div class="card border-rounded cback">
+                    <div class="card-header">
+                        Task Details
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Quarterly Budget</h5>
+                        <p class="card-text">
+                            <p><h4>Date Created:</h4> 05/06/2024</p>
+                            <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                            </div></p>
+                            <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                        <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                        <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                        </p>
+                        <div class="col-md-8">
+                        <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                        <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                <div class="card border-rounded cback">
+                    <div class="card-header">
+                        Task Details
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Quarterly Budget</h5>
+                        <p class="card-text">
+                            <p><h4>Date Created:</h4> 05/06/2024</p>
+                            <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                            </div></p>
+                            <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                            <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                            <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                            </p>
+                            <div class="col-md-8">
+                            <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                            <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card border-rounded cback">
+                            <div class="card-header">
+                            Task Details
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Quarterly Budget</h5>
+                                <p class="card-text">
+                                <p><h4>Date Created:</h4> 05/06/2024</p>
+                                <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                                    </div></p>
+                                    <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                                    <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                                    <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                                </p>
+                                <div class="col-md-8">
+                                    <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                                    <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="carousel-item">
+                        <div class="card border-rounded cback">
+                            <div class="card-header">
+                            Task Details
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Quarterly Budget</h5>
+                                <p class="card-text">
+                                <p><h4>Date Created:</h4> 05/06/2024</p>
+                                <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                                    </div></p>
+                                    <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                                    <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                                    <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                                </p>
+                                <div class="col-md-8">
+                                    <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                                    <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="carousel-item">
+                        <div class="card border-rounded cback">
+                            <div class="card-header">
+                            Task Details
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Quarterly Budget</h5>
+                                <p class="card-text">
+                                <p><h4>Date Created:</h4> 05/06/2024</p>
+                                <p><div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+                                    </div></p>
+                                    <p><h4>Project Description:</h4>Create a Quarterly budget utilizing information from previous quartes provide and accurate forecast.</p>
+                                    <p><h4>Team Members on Project:</h4>Kayla A., Karen C., Chris N.</p>
+                                    <p><h4>Estimated Date of Completion:</h4> 05/06/2024</p>
+                                </p>
+                                <div class="col-md-8">
+                                    <a href="./task_dashboard.html"><button type="button submit" class="btn btnc">Complete</button></a>
+                                    <a href="#"><button type="button" class="btn btne">Edit</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid footer">
+                <div class="row justify-content-between">
+                    <div class="col-md-4 mt-3">
+                        <h5 class=>Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="mailto:info@taskdaddy.com" class="accent-text">info@taskdaddy.com</a></li>
+                            <li><a href="tel:+1234567890" class="accent-text">+1 234 567 8901</a></li>
+                            <li><a href="#" class="accent-text">123 Task Daddy Way</a></li>
+                            <li><a href="#" class="accent-text">New York, NY 10001</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <img src="./static/images/task_daddy_logo-transparent.gif" alt="Footer Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-4 mt-3 justify-content-end">
+                        <h5 class=>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="privacy_policy.html" class="accent-text">Privacy Policy</a></li>
+                            <li><a href="terms_of_use.html" class="accent-text">Terms of Use</a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <p class="accent">Your go-to task management and to-do list solution.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" id="copy-banner">
+                &copy; 2024 TaskDaddy. All rights reserved.
+            </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>    

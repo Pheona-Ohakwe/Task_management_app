@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Dashboard" content="Dashboard"/>
+<link rel="shortcut icon" href="./static/images/large_taskdaddy.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./static/dashboard-styles.css">
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+<script data-id="08240210496800466">new CoolorsPaletteWidget("08240210496800466", ["000000","f10101","0135ce","00bfe3","23007d","f0ec02","4f0142","e65400","db02a3","b6edfa","ffffff"]); </script>
+<title>Dashboard</title>
+
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" id="nav1" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" id="login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+                                Tasks
+                            </a>
+                            <ul class="dropdown-options" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="task_dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="task_create.html">Create</a></li>
+                                <li><a class="dropdown-item" href="task_details.html">Details</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="mt-3">
+                            <p>Not a member? <a href="registration.html">Sign up here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 text-center">
+    <h1>Dashboard</h1>
+    </div>
+    <!-- Priority Task Progress -->
+    <section class="container row col-12 rounded p-3 m-5" id="priority">
+        <h4 class="ptasks">Priority Tasks</h4>
+        <div class="progress ps-0" role="progressbar" aria-label="Quarterly Budget" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar first" style="width: 75%">Quarterly Budget</div>
+          </div>
+          <div class="progress ps-0 my-4" role="progressbar" aria-label="Launch New Website" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar second" style="width: 50%">Launch New Website</div>
+          </div>
+          <div class="progress ps-0" role="progressbar" aria-label="Project 1" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar third" style="width: 65%">Overview Project</div>
+          </div>
+    </section>
+    <!-- Big Container for Task and Calender -->
+    <section class="container-fluid row m-4">
+        <div class="col-md-4 mb-4 p-6 taskmenu" style="width: 18rem;">
+            <div class="card-header text-center">
+              <h2>Tasks</h2>
+            </div>
+            <!-- Tasks  -->
+            <ul class="list-group list-group-flush text-center">
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Quarterly Budget </a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Launch New Website</a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Overview Project</a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Employee Reviews</a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Full Staff Meeting Agenda</a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Job Posting for New Position</a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">Send Out Memo on PTO</a></li>
+              <li class="list-group-item paint"><a href="./task_details.html" class="btn shadow-none btnt">New Client Acquisition Plan</a></li>
+            </ul>
+        </div>
+        <!-- calender -->
+        <div class="col-md-8 justify-content-around align-content-center calender">
+            <table>
+                <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>sat</th>
+                </tr>
+            </thead>
+             
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+     
+    </html>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid footer">
+            <div class="row justify-content-between">
+                <div class="col-md-4 mt-3">
+                    <h5 class=>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:info@taskdaddy.com" class="accent-text">info@taskdaddy.com</a></li>
+                        <li><a href="tel:+1234567890" class="accent-text">+1 234 567 8901</a></li>
+                        <li><a href="#" class="accent-text">123 Task Daddy Way</a></li>
+                        <li><a href="#" class="accent-text">New York, NY 10001</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 my-3">
+                    <img src="./static/images/task_daddy_logo-transparent.gif" alt="Footer Image" class="img-fluid">
+                </div>
+                <div class="col-md-4 mt-3 justify-content-end">
+                    <h5 class=>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy_policy.html" class="accent-text">Privacy Policy</a></li>
+                        <li><a href="terms_of_use.html" class="accent-text">Terms of Use</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="accent">Your go-to task management and to-do list solution.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" id="copy-banner">
+            &copy; 2024 TaskDaddy. All rights reserved.
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
